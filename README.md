@@ -1,6 +1,6 @@
-# FLAGSHIP by The Orz
+# FLAGSHIP by The Orz
 
-### 256 bytes linux procedural graphics for Revision 2021 demoparty (wild entry)
+### 256 bytes linux procedural graphics for Revision 2021 demoparty (wild entry)
 
 this doesn't use any libraries (not even the standard C library) and use two syscalls (open / mmap) to output to the Linux framebuffer device (fbdev), this also doesn't use shell / compression stub so it is a 'pure' standalone 256 bytes 32 bits ELF (64 bits wasn't tested)
 
@@ -12,9 +12,9 @@ this intro led to many improvements (mainly related to 32 bits C + custom header
 
 ![screenshot](flagship_400x225.png?raw=true "Screenshot")
 
-Also have included screenshots of the original version which was 1536x864 (only width is necessary), the original is much more visually pleasing but since the result is resolution dependent i couldn't fit it into 256 bytes (maybe it is doable ?)
+Also have included screenshots of the original version which was 1536x864 (only width is necessary), the 1536 width version is much more visually pleasing but since the result is resolution dependent i couldn't fit it into 256 bytes (maybe it is doable ?)
 
-![screenshot original](flagship_1586x1080_400x225.png?raw=true "Screenshot (original version)")
+![1536x864 version](flagship_1536x864_400x225.png?raw=true "Screenshot (1536x864 version)")
 
 requirements:
 - 32 bits /dev/fb0 with supported resolution
