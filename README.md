@@ -40,7 +40,7 @@ The algorithm is some kind of CORDIC algorithm and show interestingly some kind 
 
 This show that some interesting intro can be done in pure C.
 
-ELF header is taking 48 bytes and there is ~58 bytes of init code so technically not very far from a 128 bytes if header and init code is not counted !
+ELF header is taking 48 bytes and there is ~58 bytes of init code so technically not very far from a 128 bytes if header and init code is ommited !
 
 [pouet link](https://www.pouet.net/prod.php?which=88636)
 
