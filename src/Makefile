@@ -2,7 +2,7 @@ CC=gcc-11
 STANDARD_FLAGS=-std=c99 -pedantic -Wno-switch -Wno-conversion -Wno-uninitialized -Wno-strict-aliasing \
 	-fno-exceptions -ffast-math -fsingle-precision-constant -fno-ident \
     -funsafe-math-optimizations -fvisibility=hidden -fmerge-all-constants \
-    -fno-align-functions -fno-align-loops -fno-math-errno -march=native
+    -fno-align-functions -fno-align-loops -fno-math-errno -march=haswell
 OPTI_FLAGS=-Os -mfpmath=both -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-stack-protector -ftree-vectorize -fopt-info-vec-optimized \
 	-fomit-frame-pointer -fno-math-errno -fdata-sections -ffunction-sections -fno-stack-check \
 	-nostartfiles -nodefaultlibs -no-pie -fno-plt -fno-pic -fno-unroll-loops -Winline 
