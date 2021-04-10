@@ -2,9 +2,11 @@
 
 ### 256 bytes linux procedural graphics for Revision 2021 demoparty (wild entry)
 
-this doesn't use any libraries (not even the standard C library) and use two syscalls (open / mmap) to output to the Linux framebuffer device (fbdev), this also doesn't use shell / compression stub so it is a 'pure' standalone 256 bytes 32 bits ELF (64 bits wasn't tested)
+this doesn't use any libraries (not even the standard C library) and use two syscalls (open / mmap) to output to the Linux framebuffer device (fbdev), this also doesn't use shell / compression stub so it is a standalone 256 bytes 32 bits ELF (64 bits wasn't tested)
 
 this use some SIMD instructions for saturated arithmetic (using intrinsics)
+
+binary size is 252 bytes using `-march=haswell` other machine type may work (try `-march=native` if it don't) but some compile down to 260 bytes (especially those without AVX ?)
 
 prototyped first with my [software graphics library](https://github.com/grz0zrg/fbg)
 
@@ -36,7 +38,7 @@ change graphical terminal resolution:
 
 this is a follow-up of the 64-bit TRUESPACE procedural graphics intro, was too busy trying to improve my C intro framework so didn't had enough time to craft a scene at the time of TRUESPACE (especially since 32 bits ELF didn't work yet) but then i had some time... :) most of the code is C with hand crafted ELF headers, it is 32 bits so that many more bytes can be gained over a 64 bits version (due to ELF header)
 
-The algorithm is some kind of CORDIC algorithm and show interestingly some kind of fractal.
+The algorithm is some kind of CORDIC algorithm and show some kind of fractal.
 
 This show that some interesting intro can be done in pure C.
 
