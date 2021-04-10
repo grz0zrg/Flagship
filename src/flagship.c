@@ -75,8 +75,8 @@ void _start() {
         x = (x - (x >> 12)) - y + (frame >> 7);
         y = y + (x >> 1 - (y >> 23)) + ((frame >> 7) & (x >> 2));
 
-        index = ((WIDTH >> 1) + (x >> 13)) + (y >> 13) * WIDTH * 4;
-        index2 = ((WIDTH >> 1) - (x >> 13)) + (y >> 13) * WIDTH * 4;
+        index = (((WIDTH >> 1) + (x >> 13)) + (y >> 13) * WIDTH) * 4;
+        index2 = (((WIDTH >> 1) - (x >> 13)) + (y >> 13) * WIDTH) * 4;
 
         // clamp
         if (index >= FRAMEBUFFER_LENGTH) { index = 0; index2 = 0; } // if index2 is omitted the binary size get bigger; why ?
